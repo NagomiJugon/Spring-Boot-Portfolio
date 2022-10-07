@@ -24,7 +24,6 @@ public class MailMvcConfig implements WebMvcConfigurer {
     FilterRegistrationBean<MailFilter> registrationBean = new FilterRegistrationBean<>();
 
     System.out.println("loggingFilter() is called");
-    System.out.println(sessionData.getId());
 
     registrationBean.setFilter(new MailFilter(sessionData));
     registrationBean.setOrder(1);

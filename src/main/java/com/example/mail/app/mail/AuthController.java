@@ -100,12 +100,6 @@ public class AuthController {
         return "redirect:/signIn";
       default:
         httpSession = request.getSession();
-        System.out.println("AUTH  ################################################################");
-        System.out.println(httpSession.getId());
-        System.out.println("AUTH  ################################################################");
-        sessionData.clear();
-        sessionData.setId(id);
-        sessionData.setUserName(appUser.getName());
         sessionData.setUsers(httpSession.getId(), appUser);
         return "redirect:/mail/index";
     }
